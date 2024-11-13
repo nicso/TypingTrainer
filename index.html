@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10.0, minimum-scale=0.1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Typing trainer<span class="blink accent">_</span></h1>
+<form action="#" method="get" class="flexV">
+    <label for="template">
+        Characters to train
+        <input type="text" name="" id="template" value="qamp">
+    </label>
+    <div class="flexH tools" >
+        <button id="FullAlpha" type="button">Full alphabet</button>
+        <button id="fullNum" type="button">Full numbers</button>
+        <button id="fullAlphPun" type="button">Full alphabet with punctuation</button>
+    </div>
+    <div id="options" class="flexH">
+        <label for="letters">
+            Length :
+            <input type="number" name="" id="letters" value="3" min="1">
+        </label>
+        <label for="minletters">
+            Min Letters :
+            <input type="number" name="" id="minletters" value="3" min="1">
+        </label>
+        <label for="maxletters">
+            Max Letters :
+            <input type="number" name="" id="maxletters" value="3" min="1">
+        </label>
+<!--        <label for="time">-->
+<!--            Time :-->
+<!--            <input type="number" name="" id="time" value="30">-->
+<!--        </label>-->
+    </div>
+    <button type="button" id="reset">Reset</button>
+</form>
+<br>
+<p hidden="hidden" id="para" class="outline "></p>
+<div id="game">
+    <span class="past"></span><span class="current"></span><span class="futur"></span>
+</div>
+<div class="grid score">
+    <p id="errors"> </p>
+    <p id="timer">0s</p>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+<footer>
+    this is a footer
+</footer>
+</html>
