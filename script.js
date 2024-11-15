@@ -21,8 +21,8 @@ const fullAlphPunSet = [
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
     ',','.','?','!',';',':']
 
-let minLetters = 3;
-let maxLetters = 3;
+let minLetters = minLettersElem.value;
+let maxLetters = maxLettersElem.value;
 let letters = lettersElem.value;
 let letterPool = templateElem.value;
 let errors = 0;
@@ -129,17 +129,16 @@ document.addEventListener("keydown", (e) => {
 
     if(templateElem === document.activeElement){
         if(e.key === "Tab"){
-            console.log("oui");
             e.preventDefault();
             templateElem.blur();
         }
+
         return;
     }
 
     if(!isStarted && templateElem !== document.activeElement){
         startTimer();
     }
-
     if(e.key === wantedKey){
         index++;
         updatePara();
